@@ -10,3 +10,16 @@ class Book(models.Model):
     
     def acquire_book(self):
         return "book has been acquired"
+    
+
+class Author:
+
+    def __init__(self, author) -> None:
+        self._author = author
+    
+    def get_all_books(self):
+        return range(45)
+
+    def get_all_names(self):
+        return []
+
