@@ -4,8 +4,8 @@ jobs:
   say-hello:
     docker:
       - image: cimg/python:3.9
-    environment: qgJsqEjzfSrlyZOLDyapdlYV7xcIrRq6C
-      COVERALLS_REPO_TOKEN: $COVERALLS_REPO_TOKEN
+    environment: 
+      COVERALLS_REPO_TOKEN: qgJsqEjzfSrlyZOLDyapdlYV7xcIrRq6C
     steps:
       - checkout
 
