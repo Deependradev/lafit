@@ -17,6 +17,17 @@ jobs:
       - run:
           name: "Say hello"
           command: "echo Hello, World!"
+      - run: 
+          name: "Run tests"
+          command: coverage run -m pytest 
+      
+      - run:
+          name: "Generate Coverage report"
+          command: coverage report -m 
+
+      - run:
+          name: "Upload coverage"
+          command: coveralls
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
