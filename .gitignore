@@ -31,9 +31,6 @@ env/
 # Secret key
 secret_key.txt
 
-# Configuration files
-*.cfg
-
 # Django migrations
 *.pyc
 *.pyo
