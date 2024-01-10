@@ -34,7 +34,9 @@ jobs:
 
       - run:
           name: "Upload coverage"
-          command: pipenv run coveralls
+          command: |
+              export COVERALLS_REPO_TOKEN=$COVERALLS_TOKEN
+              pipenv run coveralls
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
