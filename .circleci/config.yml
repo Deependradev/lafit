@@ -9,10 +9,11 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/configuration-reference/#executor-job
     docker:
-      - image: cimg/python
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
+      - image: cimg/python:3.12.1
     steps:
+      - checkout
+      - run: 
+        python --version
       - checkout
       - run:
           name: "Say hello"
