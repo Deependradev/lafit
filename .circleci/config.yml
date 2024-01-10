@@ -14,7 +14,7 @@ jobs:
       - run:
           name: "Install dependencies"
           command: |
-            pipenv install --dev
+            PIPENV_SHELL=/bin/bash pipenv install --dev
             pipenv shell  # Activate the virtual environment
 
       - run:
