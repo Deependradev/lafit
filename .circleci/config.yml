@@ -28,7 +28,10 @@ jobs:
       - run:
           name: "Upload coverage"
           command: pipenv run coveralls
-
+      - run:
+          name: "deploye"
+          command: | 
+            sh deploy/run.sh
 workflows:
   version: 2
   say-hello-workflow:
