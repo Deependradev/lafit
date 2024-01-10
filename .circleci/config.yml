@@ -20,17 +20,21 @@ jobs:
           name: "Install dependecies"
           command: pipenv install 
 
+      # - run: 
+      #     name: "Activate Env"
+      #     command: pipenv  
+
       - run: 
           name: "Run tests"
-          command: coverage run -m pytest 
+          command: pipenv run coverage run -m pytest 
       
       - run:
           name: "Generate Coverage report"
-          command: coverage report -m 
+          command: pipenv run coverage report -m 
 
       - run:
           name: "Upload coverage"
-          command: coveralls
+          command: pipenv run coveralls
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
